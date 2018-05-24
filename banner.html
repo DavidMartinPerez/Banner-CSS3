@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Banner</title>
+    <style>
+      .contenedor{
+        width: 800px;
+        height: 400px;
+        background-image: url("fondo.jpg");
+        position: relative;
+      }
+      .subcontenedor{
+        position: relative;
+        top: 58px;
+        left: 74px;
+        width: 70%;
+        height: 60%;
+        background-image: url("background.png");
+        background-repeat: no-repeat;
+        overflow: hidden;
+      }
+      .contenedorNubes{
+        position: relative;
+        left: 500px;
+        width: 100%;
+        height: 100%;
+        animation: moverNubes 15s linear infinite;
+      }
+      .contenedorNubes2{
+        position: relative;
+        top: -240px;
+        left: 350px;
+        width: 100%;
+        height: 100%;
+        animation: moverNubes2 15s linear infinite;
+      }
+      .nube1, .nube2, .nube3{
+        position: relative;
+        width: 70px;
+        height: 50px;
+      }
+      .nube1{
+        top: 15px;
+        left: 20px;
+      }
+      .nube2{
+        top: 39px;
+        left: 58px;
+      }
+      .nube3{
+        top: 0px;
+        left: 108px;
+      }
+      .aguaFondo{
+        position: relative;
+        top: -312px;
+        left:-20px;
+        width: 110%;
+        height: 30%;
+        background-image: url("agua-fondo.png");
+        animation: moverAguaFondo 2s linear infinite;
+      }
+      .aguaFrente{
+        position: relative;
+        top: -374px;
+        left:-6px;
+        width: 110%;
+        height: 30%;
+        background-image: url("agua-frente.png");
+        animation: moverAguaFrente 2s linear infinite;
+        z-index: 35;
+      }
+      .boteMueve{
+        position: relative;
+        top: -582px;
+        left: -178px;
+        width: 249px;
+        height: 215px;
+        z-index: 30;
+        background-image: url("Bote.png");
+        background-repeat: no-repeat;
+        animation: moverBarco 5s linear;
+        animation-fill-mode: forwards;
+      }
+      .interrogacion{
+        position: relative;
+        top: -825px;
+        left: 190px;
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+        background-image: url("interrogacion.png");
+        background-repeat: no-repeat;
+        animation: aparecer 1s linear;
+        animation-fill-mode: forwards;
+        animation-delay: 5s;
+      }
+      .frase{
+        position: relative;
+        font-size: 35px;
+        color: darkgreen;
+        top: -924px;
+        left: 324px;
+        width: 230px;
+        height: 124px;
+        opacity: 0;
+        animation: aparecer 1s linear;
+        animation-fill-mode: forwards;
+        animation-delay: 6.5s;
+      }
+      @keyframes moverNubes {
+        from {left: 0px;}
+        to {left: -350px;}
+      }
+      @keyframes moverNubes2 {
+        from {left: 350px;}
+        to {left: 0px;}
+      }
+      @keyframes moverAguaFondo {
+        0% {top: -312px; left: -20px;}
+        50% {top: -308px; left: -12px;}
+        100% {top: -312px; left: -20px;}
+      }
+      @keyframes moverAguaFrente {
+        0% {top: -374px; left: -6px;}
+        50% {top: -378px; left: -10px;}
+        100% {top: -374px; left: -6px;}
+      }
+      @keyframes moverBarco {
+        0%{left: -178px; top;}
+        100%{left: 0px;}
+      }
+      @keyframes aparecer {
+        from{opacity: 0;}
+        to{opacity: 1;}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="subcontenedor">
+        <div><a href="https://davidmartinperez.github.io/" target="_blank">@David Martín Pérez</a></div>
+        <div class="contenedorNubes">
+          <img class="nube1" src="nube1.png"></img>
+          <img class="nube2" src="nube2.png"></img>
+          <img class="nube3" src="nube3.png"></img>
+        </div>
+        <div class="contenedorNubes2">
+          <img class="nube1" src="nube1.png"></img>
+          <img class="nube2" src="nube2.png"></img>
+          <img class="nube3" src="nube3.png"></img>
+        </div>
+        <div class="aguaFondo"></div>
+        <div class="aguaFrente"></div>
+        <div class="boteMueve"></div>
+        <div class="interrogacion"></div>
+        <div class="frase">¡Mi primer super Banner!<br>¡Yuju!</div>
+      </div>
+    </div>
+    <div><a href="https://github.com/DavidMartinPerez/Banner-CSS3" target="_blank">Ver en github</a></div>
+  </body>
+</html>
